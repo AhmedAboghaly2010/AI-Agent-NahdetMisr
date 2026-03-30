@@ -405,7 +405,7 @@ with st.sidebar:
                         embedding = get_embedding(chunk["content"], EMBED_MODEL)
                         chunk["embedding"] = embedding.tolist()
                         all_chunks.append(chunk)
-                        time.sleep(0.1)  # تأخير بسيط لتجنب Rate Limit
+                        time.sleep(4)  # تأخير بسيط لتجنب Rate Limit
                     except Exception as e:
                         st.warning(f"⚠️ تخطي chunk: {str(e)[:40]}")
 
